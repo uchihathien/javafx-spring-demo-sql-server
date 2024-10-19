@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:controller="cinema.jfx.controller.LoginController" fx:id="login_form" prefHeight="400.0" prefWidth="500.0" stylesheets="@css/css.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane prefHeight="400.0" prefWidth="500.0" styleClass="bg-form">
+            <children>
+                <Button fx:id="login_Close1" layoutX="452.0" layoutY="2.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="48.0" styleClass="close">
+                    <graphic>
+<!--                        <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" size="1.5em" />-->
+                    </graphic>
+                </Button>
+                <Button fx:id="login_minimize1" layoutX="404.0" layoutY="2.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="48.0" styleClass="minimize">
+                    <graphic>
+<!--                        <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="1.5em" />-->
+                    </graphic>
+                </Button>
+                <Label layoutX="196.0" layoutY="163.0" text="Sign in" textFill="WHITE">
+                    <font>
+                        <Font name="Berlin Sans FB" size="40.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="login_username1" layoutX="150.0" layoutY="220.0" prefHeight="30.0" prefWidth="200.0" promptText="username" styleClass="text-field" />
+                <PasswordField fx:id="login_password1" layoutX="149.0" layoutY="263.0" prefHeight="30.0" prefWidth="200.0" promptText="password" styleClass="text-field" />
+                <Button fx:id="login_buton1" layoutX="186.0" layoutY="318.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="130.0" styleClass="login-btn" text="Login">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

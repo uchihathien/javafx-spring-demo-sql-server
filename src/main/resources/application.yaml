@@ -1,0 +1,21 @@
+spring:
+  jpa:
+
+    # This is the SqLite Dialect extension to support @Lob
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  main:
+    web-application-type: none
+
+  datasource:
+    url: jdbc:sqlserver://DESKTOP-K5NGCL6;databaseName=UCinema;encrypt=true;trustServerCertificate=true;
+    username: film
+    password: 9210
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+
+

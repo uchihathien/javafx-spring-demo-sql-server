@@ -1,0 +1,1476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="homepage-form" stylesheets="@css/css.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinema.jfx.controller.DashboardController">
+    <children>
+        <AnchorPane layoutX="3.0" prefHeight="768.0" prefWidth="1280.0" styleClass="homepage-form" stylesheets="@css/css.css">
+            <children>
+                <AnchorPane layoutX="-4.0" prefHeight="768.0" prefWidth="256.0" styleClass="bg-form" stylesheets="@css/css.css">
+                    <children>
+      <!--                        <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="71.0" layoutY="163.0" size="12em" text="" />-->
+                        <Label fx:id="adminlable" layoutX="96.0" layoutY="214.0" text="Admin" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Berlin Sans FB Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="80.0" layoutY="177.0" text="Welcome" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Berlin Sans FB" size="25.0" />
+                            </font>
+                        </Label>
+                        <Button alignment="CENTER" layoutX="27.0" layoutY="267.0" mnemonicParsing="false" onAction="#handleDashboard" prefHeight="60.0" prefWidth="205.0" styleClass="nav" text="Dashboard">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="27.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleAddMovies" prefHeight="60.0" prefWidth="205.0" styleClass="nav" text="Add Movies">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="27.0" layoutY="409.0" mnemonicParsing="false" onAction="#handleBooking" prefHeight="60.0" prefWidth="205.0" styleClass="nav" text="Booking">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="25.0" layoutY="480.0" mnemonicParsing="false" onAction="#handleEditScreening" prefHeight="60.0" prefWidth="205.0" styleClass="nav" text="Edit Screening">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/employee.png" />
+                           </image>
+                        </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutX="25.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleEmployee" prefHeight="60.0" prefWidth="205.0" styleClass="nav" text="Employee" textAlignment="CENTER">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="25.0" layoutY="627.0" mnemonicParsing="false" onAction="#handleReport" prefHeight="60.0" prefWidth="205.0" styleClass="nav" text="Report">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="55.0" layoutY="720.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="149.0" styleClass="sign-out" text="Sign out">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                        </Button>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/user.png" />
+                     </image>
+                  </ImageView>
+                          <ImageView fitHeight="50.0" fitWidth="41.0" layoutX="38.0" layoutY="633.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/employee.png" />
+                     </image>
+                  </ImageView>
+                          <ImageView fitHeight="50.0" fitWidth="41.0" layoutX="38.0" layoutY="561.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/employee.png" />
+                     </image>
+                  </ImageView>
+                          <ImageView fitHeight="50.0" fitWidth="41.0" layoutX="38.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/employee.png" />
+                     </image>
+                  </ImageView>
+                          <ImageView fitHeight="50.0" fitWidth="41.0" layoutX="35.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/employee.png" />
+                     </image>
+                  </ImageView>
+                          <ImageView fitHeight="50.0" fitWidth="41.0" layoutX="35.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/employee.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </AnchorPane>
+            <AnchorPane fx:id="dashboard" layoutX="34.0" layoutY="7.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="100.0">
+               <children>
+                      <AnchorPane layoutX="273.0" layoutY="34.0" prefHeight="204.0" prefWidth="916.0" styleClass="bg-top" stylesheets="@css/css.css">
+                          <children>
+                              <Button layoutX="27.0" layoutY="25.0" mnemonicParsing="false" prefHeight="170.0" prefWidth="292.0" styleClass="bg-button" stylesheets="@css/css.css" />
+                              <ImageView fitHeight="105.0" fitWidth="105.0" layoutX="42.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/ticketDashBoard.png" />
+                           </image>
+                        </ImageView>
+                              <Label layoutX="147.0" layoutY="148.0" stylesheets="@css/css.css" text="Total Sold Ticket" textAlignment="RIGHT" textFill="WHITE">
+                                  <font>
+                                      <Font size="20.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="269.0" layoutY="25.0" styleClass="number" stylesheets="@css/css.css" text="9" textFill="WHITE">
+                                  <font>
+                                      <Font size="20.0" />
+                                  </font>
+                              </Label>
+                              <Button layoutX="339.0" layoutY="25.0" mnemonicParsing="false" prefHeight="170.0" prefWidth="292.0" styleClass="bg-button" stylesheets="@css/css.css" />
+                              <ImageView fitHeight="105.0" fitWidth="105.0" layoutX="349.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/money.png" />
+                           </image>
+                        </ImageView>
+                              <Label layoutX="454.0" layoutY="148.0" stylesheets="@css/css.css" text="Total Income" textAlignment="RIGHT" textFill="WHITE">
+                                  <font>
+                                      <Font size="20.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="475.0" layoutY="25.0" styleClass="number" stylesheets="@css/css.css" text="\$990.9" textAlignment="RIGHT" textFill="WHITE">
+                                  <font>
+                                      <Font size="20.0" />
+                                  </font>
+                              </Label>
+                              <Button layoutX="652.0" layoutY="25.0" mnemonicParsing="false" prefHeight="170.0" prefWidth="292.0" styleClass="bg-button" stylesheets="@css/css.css" />
+                              <ImageView fitHeight="105.0" fitWidth="105.0" layoutX="665.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/play.png" />
+                           </image>
+                        </ImageView>
+                              <Label layoutX="770.0" layoutY="148.0" stylesheets="@css/css.css" text="Avaiable Movies" textAlignment="RIGHT" textFill="WHITE">
+                                  <font>
+                                      <Font size="20.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="892.0" layoutY="25.0" prefHeight="58.0" prefWidth="0.0" styleClass="number" stylesheets="@css/css.css" text="9" textFill="WHITE">
+                                  <font>
+                                      <Font size="20.0" />
+                                  </font>
+                              </Label>
+                          </children>
+                      </AnchorPane>
+                  <ImageView fitHeight="220.0" fitWidth="200.0" layoutX="800.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../3.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="220.0" fitWidth="200.0" layoutX="380.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="220.0" fitWidth="200.0" layoutX="590.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../4.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="220.0" fitWidth="200.0" layoutX="1010.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../12.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="220.0" fitWidth="200.0" layoutX="380.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../5.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="220.0" fitWidth="200.0" layoutX="590.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../6.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="220.0" fitWidth="200.0" layoutX="800.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../7.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="220.0" fitWidth="200.0" layoutX="1010.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../11.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="booking1" prefHeight="768.0" prefWidth="1289.0" visible="false">
+               <children>
+                  <Button layoutX="348.0" layoutY="285.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" styleClass="bg-form" stylesheets="@css/css.css" text="Movies" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="791.0" layoutY="285.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" styleClass="bg-form" stylesheets="@css/css.css" text="Services" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="book1" prefHeight="768.0" prefWidth="1289.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="112.0" layoutX="458.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+                  <Circle fill="WHITE" layoutX="519.0" layoutY="71.0" radius="39.0" stroke="#d9d9d9" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Text layoutX="507.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="24.0">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Text>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="556.0" layoutX="276.0" layoutY="144.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="485.0" />
+                  <Button layoutX="276.0" layoutY="714.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" styleClass="back-button" stylesheets="@css/css.css" text="Back">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1142.0" layoutY="714.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" styleClass="next-button" stylesheets="@css/css.css" text="Next">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="556.0" layoutX="781.0" layoutY="144.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="485.0" />
+                  <TextField layoutX="304.0" layoutY="155.0" prefHeight="40.0" prefWidth="200.0" promptText="Ngày/Tháng/Năm" />
+                  <TextField layoutX="532.0" layoutY="155.0" prefHeight="40.0" prefWidth="200.0" promptText="Search" />
+                  <TableView layoutX="298.0" layoutY="210.0" prefHeight="464.0" prefWidth="441.0">
+                     <columns>
+                        <TableColumn prefWidth="175.0" text="Movie Title" />
+                        <TableColumn minWidth="0.0" prefWidth="84.0" text="Genre" />
+                        <TableColumn prefWidth="61.0" text="Duration" />
+                        <TableColumn prefWidth="120.0" text="Showing Date" />
+                     </columns>
+                  </TableView>
+                  <Circle fill="WHITE" layoutX="761.0" layoutY="71.0" radius="39.0" stroke="#d9d9d9" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Text layoutX="749.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" wrappingWidth="24.0">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Text>
+                  <Circle fill="WHITE" layoutX="1024.0" layoutY="70.0" radius="39.0" stroke="#d9d9d9" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Text layoutX="1012.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="24.0">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="87.0" fitWidth="115.0" layoutX="579.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/arrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="87.0" fitWidth="115.0" layoutX="831.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/arrow.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="booking2" prefHeight="768.0" prefWidth="1292.0" stylesheets="@css/css.css" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="112.0" layoutX="457.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="border" width="625.0" />
+                  <Circle fill="WHITE" layoutX="518.0" layoutY="71.0" radius="39.0" stroke="#1aff00" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Text layoutX="506.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="24.0">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Text>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="556.0" layoutX="279.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="984.0" />
+                  <Button layoutX="279.0" layoutY="714.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" styleClass="back-button" stylesheets="@css/css.css" text="Back">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1141.0" layoutY="714.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" styleClass="next-button" stylesheets="@css/css.css" text="Next">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Circle fill="WHITE" layoutX="760.0" layoutY="71.0" radius="39.0" stroke="#d9d9d9" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Text layoutX="748.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" wrappingWidth="24.0">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Text>
+                  <Circle fill="WHITE" layoutX="1023.0" layoutY="70.0" radius="39.0" stroke="#d9d9d9" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Text layoutX="1011.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="24.0">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Text>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="44.0" layoutX="416.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" width="707.0" />
+                  <Text layoutX="722.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Màn hình">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#525252" height="378.0" layoutX="314.0" layoutY="217.0" stroke="BLACK" strokeType="INSIDE" width="891.0" />
+                  <Button layoutX="408.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="1092.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lối Vào">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="327.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lối Vào">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="455.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="503.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="551.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="598.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="646.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="693.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="740.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="788.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="836.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A10">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="883.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A11">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="931.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A12">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="979.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A13">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1026.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A14">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1074.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="A15">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="407.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="454.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="502.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="550.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="597.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="645.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="692.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="739.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="787.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="835.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B10">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="882.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B11">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="930.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B12">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="978.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B13">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1025.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B14">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1073.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="B15">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="407.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="454.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="502.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="550.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="597.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="645.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="692.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="739.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="787.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="834.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C10">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="882.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C11">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="930.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C12">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="978.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C13">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1025.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C14">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1073.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="C15">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="407.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="454.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="502.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="550.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="597.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="645.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="692.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="739.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="787.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Đ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="835.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D10">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="882.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D11">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="930.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D12">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="978.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D13">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1025.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D14">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1073.0" layoutY="398.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="D15">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="406.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="453.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="501.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="549.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="596.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="644.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="691.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="738.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="786.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="834.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E10">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="881.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E11">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="929.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E12">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="977.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E13">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1024.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E14">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1072.0" layoutY="444.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="E15">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="406.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="453.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="501.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="549.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="596.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="644.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="691.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="738.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="786.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="834.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F10">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="881.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F11">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="929.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F12">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="977.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F13">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1024.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F14">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1072.0" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="F15">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="808.0" layoutY="597.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="855.0" layoutY="624.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chưa chọn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="945.0" layoutY="598.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="chair-active" stylesheets="@css/css.css">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="992.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đã chọn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="313.0" layoutY="686.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ghế đang chọn:">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1020.0" layoutY="686.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá:">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="44.0" fitWidth="66.0" layoutX="605.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/arrowActive.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="66.0" layoutX="869.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/arrow.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="booking3" prefHeight="768.0" prefWidth="1289.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="112.0" layoutX="458.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+                  <Circle fill="WHITE" layoutX="519.0" layoutY="71.0" radius="39.0" stroke="#10ff70" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Text layoutX="507.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="24.0">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Text>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="556.0" layoutX="276.0" layoutY="144.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="984.0" />
+                  <Button layoutX="276.0" layoutY="714.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" styleClass="back-button" stylesheets="@css/css.css" text="Back">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1142.0" layoutY="714.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" styleClass="next-button" stylesheets="@css/css.css" text="Next">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <TableView layoutX="298.0" layoutY="167.0" prefHeight="507.0" prefWidth="441.0">
+                     <columns>
+                        <TableColumn prefWidth="175.0" text="Loại / Combo bắp nước" />
+                     </columns>
+                  </TableView>
+                  <Circle fill="WHITE" layoutX="761.0" layoutY="71.0" radius="39.0" stroke="#10ff70" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Text layoutX="749.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" wrappingWidth="24.0">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Text>
+                  <Circle fill="WHITE" layoutX="1024.0" layoutY="70.0" radius="39.0" stroke="#d9d9d9" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Text layoutX="1012.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="24.0">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="800.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên phim:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="800.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="800.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loại / Combo bắp nước:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="800.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="800.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="800.0" layoutY="538.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="400.0" text="Chọn hình thức thanh toán">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="800.0" layoutY="610.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="400.0" styleClass="background-HD" stylesheets="@css/css.css" text="In hóa đơn" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="66.0" fitWidth="95.0" layoutX="591.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/arrowActive.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="99.0" layoutX="843.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/arrowActive.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="editscreening" prefHeight="768.0" prefWidth="1286.0" visible="false">
+               <children>
+                  <AnchorPane layoutX="283.0" layoutY="47.0" prefHeight="694.0" prefWidth="362.0" styleClass="border" stylesheets="@css/css.css">
+                     <children>
+                        <Label fx:id="titleLabel1" layoutX="28.0" layoutY="381.0" text="Movie Title:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="titleInput1" layoutX="135.0" layoutY="384.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label fx:id="GenreLabel1" layoutX="27.0" layoutY="417.0" text="Genre:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="genreInput1" layoutX="134.0" layoutY="420.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label fx:id="durationLabel1" layoutX="29.0" layoutY="452.0" text="Duration:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="durationInput1" layoutX="136.0" layoutY="455.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label fx:id="dateLabel1" layoutX="28.0" layoutY="488.0" text="Date:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dateInput1" layoutX="135.0" layoutY="491.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Button fx:id="updateButton1" layoutX="58.0" layoutY="551.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="update-button" stylesheets="@css/css.css" text="Update">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="clearButton1" layoutX="195.0" layoutY="551.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="clear-button" stylesheets="@css/css.css" text="Clear">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="movieName" layoutX="27.0" layoutY="270.0" prefHeight="77.0" prefWidth="309.0" text="Đẹp Trai Thấy Sai Sai">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="204.0" fitWidth="188.0" layoutX="105.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../52004062221019772-deptrai.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="667.0" layoutY="47.0" prefHeight="694.0" prefWidth="598.0" styleClass="border" stylesheets="@css/css.css">
+                     <children>
+                        <TextField fx:id="searhInput1" layoutX="28.0" layoutY="14.0" prefHeight="40.0" prefWidth="250.0" promptText="Search" />
+                        <TabPane fx:id="addMoviesTable1" layoutX="24.0" layoutY="68.0" prefHeight="591.0" prefWidth="550.0" stylesheets="@css/css.css" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab fx:id="movieTitleTable1" text="Movie Title">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="genreTable1" text="Genre">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="durationTable1" text="Duration">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="dateTable1" text="Showing Date">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="addMovie" prefHeight="768.0" prefWidth="1289.0" stylesheets="@css/css.css" visible="false">
+               <children>
+                  <AnchorPane layoutX="290.0" layoutY="57.0" prefHeight="694.0" prefWidth="362.0" styleClass="border" stylesheets="@css/css.css">
+                     <children>
+                        <Button fx:id="importButton" layoutX="129.0" layoutY="268.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="import-button" stylesheets="@css/css.css" text="import">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="titleLabel" layoutX="27.0" layoutY="330.0" text="Movie Title:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="titleInput" layoutX="134.0" layoutY="333.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label fx:id="GenreLabel" layoutX="26.0" layoutY="366.0" text="Genre:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="genreInput" layoutX="133.0" layoutY="369.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label fx:id="durationLabel" layoutX="28.0" layoutY="401.0" text="Duration:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="durationInput" layoutX="135.0" layoutY="404.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label fx:id="dateLabel" layoutX="27.0" layoutY="437.0" text="Date:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dateInput" layoutX="134.0" layoutY="440.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Button fx:id="insertButton" layoutX="58.0" layoutY="502.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="insert-button" stylesheets="@css/css.css" text="Insert" textFill="#fffefe">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="updateButton" layoutX="195.0" layoutY="502.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="update-button" stylesheets="@css/css.css" text="Update">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteButton" layoutX="58.0" layoutY="551.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="delete-button" stylesheets="@css/css.css" text="Delete">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="clearButton" layoutX="195.0" layoutY="551.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="clear-button" stylesheets="@css/css.css" text="Clear">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="182.0" fitWidth="149.0" layoutX="118.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../3.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="669.0" layoutY="57.0" prefHeight="694.0" prefWidth="598.0" styleClass="border" stylesheets="@css/css.css">
+                     <children>
+                        <TextField fx:id="searhInput" layoutX="28.0" layoutY="14.0" prefHeight="40.0" prefWidth="250.0" promptText="Search" />
+                        <TabPane fx:id="addMoviesTable" layoutX="24.0" layoutY="68.0" prefHeight="591.0" prefWidth="550.0" stylesheets="@css/css.css" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab fx:id="movieTitleTable" text="Movie Title">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="genreTable" text="Genre">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="durationTable" text="Duration">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="dateTable" text="Showing Date">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="addEmployee" prefHeight="768.0" prefWidth="1289.0" stylesheets="@css/css.css" visible="false">
+               <children>
+                  <AnchorPane layoutX="283.0" layoutY="47.0" prefHeight="694.0" prefWidth="362.0" styleClass="border" stylesheets="@css/css.css" visible="false">
+                     <children>
+                        <Button fx:id="importButton1" layoutX="129.0" layoutY="269.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="import-button" stylesheets="@css/css.css" text="import">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="nameLabel" layoutX="27.0" layoutY="330.0" text="Name:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nameInput" layoutX="134.0" layoutY="333.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label fx:id="genderLabel" layoutX="26.0" layoutY="366.0" text="Gender:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="GenderInput" layoutX="133.0" layoutY="369.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label fx:id="shiftLabel" layoutX="28.0" layoutY="401.0" text="Shift:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="shiftInput" layoutX="135.0" layoutY="404.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Label fx:id="roleLabel" layoutX="27.0" layoutY="437.0" text="Role:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="roleInput" layoutX="134.0" layoutY="440.0" prefHeight="30.0" prefWidth="200.0" />
+                        <Button fx:id="insertButton1" layoutX="58.0" layoutY="502.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="insert-button" stylesheets="@css/css.css" text="Insert">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="updateButton2" layoutX="195.0" layoutY="502.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="update-button" stylesheets="@css/css.css" text="Update">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteButton1" layoutX="58.0" layoutY="551.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="delete-button" stylesheets="@css/css.css" text="Delete">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="clearButton2" layoutX="195.0" layoutY="551.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="clear-button" stylesheets="@css/css.css" text="Clear">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="220.0" fitWidth="191.0" layoutX="87.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../hihihi.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="667.0" layoutY="47.0" prefHeight="694.0" prefWidth="598.0" styleClass="border" stylesheets="@css/css.css">
+                     <children>
+                        <TextField fx:id="searhInput2" layoutX="28.0" layoutY="14.0" prefHeight="40.0" prefWidth="250.0" promptText="Search" />
+                        <TabPane fx:id="addMoviesTable2" layoutX="24.0" layoutY="68.0" prefHeight="591.0" prefWidth="550.0" stylesheets="@css/css.css" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab fx:id="nameTable" text="Name">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="genderTable" text="Gender">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="shiftTable" text="Shift">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="roleTable" text="Role">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="report" prefHeight="768.0" prefWidth="1289.0" stylesheets="@css/css.css" visible="false">
+               <children>
+                  <AnchorPane layoutX="302.0" layoutY="10.0" prefHeight="220.0" prefWidth="949.0" styleClass="bg-top">
+                     <children>
+                        <Button fx:id="revenueButton" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" prefHeight="170.0" prefWidth="292.0" styleClass="bg-button" />
+                        <ImageView fitHeight="105.0" fitWidth="105.0" layoutX="21.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/revenue.png" />
+                           </image></ImageView>
+                        <Label fx:id="numberOfRevenue" layoutX="142.0" layoutY="148.0" text="36.320.000 VNĐ" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="productsSoldButton" layoutX="326.0" layoutY="25.0" mnemonicParsing="false" prefHeight="170.0" prefWidth="292.0" styleClass="bg-button" />
+                        <ImageView fitHeight="105.0" fitWidth="105.0" layoutX="328.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/box.png" />
+                           </image></ImageView>
+                        <Button fx:id="totalTicketsButton" layoutX="637.0" layoutY="25.0" mnemonicParsing="false" prefHeight="170.0" prefWidth="292.0" styleClass="bg-button" />
+                        <ImageView fitHeight="105.0" fitWidth="105.0" layoutX="644.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/ticket.png" />
+                           </image></ImageView>
+                        <Label fx:id="revenueLabel" layoutX="180.0" layoutY="28.0" prefHeight="120.0" prefWidth="78.0" text="Tổng Doanh Thu" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="productSold" layoutX="465.0" layoutY="47.0" prefHeight="81.0" prefWidth="144.0" text="Sản Phẩm Đã Bán" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totalTickets" layoutX="770.0" layoutY="47.0" prefHeight="81.0" prefWidth="144.0" text="Tổng Số Vé" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="numberOfProductssold" layoutX="568.0" layoutY="148.0" text="36" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="numberOfTotalTickets" layoutX="872.0" layoutY="148.0" text="360" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="281.0" layoutY="241.0" prefHeight="515.0" prefWidth="725.0" styleClass="border" stylesheets="@css/css.css">
+                     <children>
+                        <Label fx:id="revenueReportLabel" layoutX="14.0" layoutY="14.0" text="Tổng doanh thu">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="revenueOfGenre" layoutX="474.0" layoutY="15.0" prefHeight="25.0" prefWidth="105.0" />
+                        <ChoiceBox fx:id="revenueOverTime" layoutX="592.0" layoutY="15.0" prefHeight="25.0" prefWidth="105.0" />
+                        <ImageView fitHeight="349.0" fitWidth="491.0" layoutX="140.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../eed0e90f23806979fa7d7b7d29555e18.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="1021.0" layoutY="241.0" prefHeight="515.0" prefWidth="241.0" styleClass="border" stylesheets="@css/css.css">
+                     <children>
+                        <Label fx:id="revenueReportLabel1" layoutX="9.0" layoutY="14.0" text="Tỳ lệ % doanh số theo phim" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            <AnchorPane fx:id="booking4" layoutX="2.0" prefHeight="768.0" prefWidth="1289.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="673.0" layoutX="276.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="984.0" />
+                  <Button layoutX="276.0" layoutY="714.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" styleClass="back-button" stylesheets="@css/css.css" text="Back">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1142.0" layoutY="714.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" styleClass="next-button" stylesheets="@css/css.css" text="Next">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <TableView layoutX="298.0" layoutY="59.0" prefHeight="615.0" prefWidth="441.0">
+                     <columns>
+                        <TableColumn prefWidth="175.0" text="Loại / Combo bắp nước" />
+                     </columns>
+                  </TableView>
+                  <Text layoutX="804.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên phim:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="804.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="804.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loại / Combo bắp nước:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="804.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="804.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="804.0" layoutY="538.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="400.0" text="Chọn hình thức thanh toán">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="804.0" layoutY="610.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="400.0" styleClass="background-HD" stylesheets="@css/css.css" text="In hóa đơn" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="booking5" layoutX="-3.0" prefHeight="768.0" prefWidth="1289.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="673.0" layoutX="276.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="984.0" />
+                  <Button layoutX="276.0" layoutY="714.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" styleClass="back-button" stylesheets="@css/css.css" text="Back">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1005.0" layoutY="627.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="169.0" styleClass="background-HD" stylesheets="@css/css.css" text="Xác nhận" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="343.0" layoutX="327.0" layoutY="54.0" stroke="BLACK" strokeType="INSIDE" width="406.0" />
+                  <Text layoutX="435.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vé xem phim (Ticket)" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="488.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên phim" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="347.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giờ:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="347.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ghế:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="347.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="347.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rạp:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="347.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá vé:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="345.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhân viên" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="601.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18-10-2024 17:57" textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="272.0" layoutX="327.0" layoutY="397.0" stroke="BLACK" strokeType="INSIDE" width="406.0" />
+                  <Text layoutX="434.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vé xem phim (Ticket)" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="487.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên phim" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="347.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giờ:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="347.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ghế:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="347.0" layoutY="612.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="347.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rạp:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="347.0" layoutY="667.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá vé:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="343.0" layoutX="768.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" width="406.0" />
+                  <Text layoutX="805.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="888.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="954.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="789.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhân viên" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1045.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18-10-2024 17:57" textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="783.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1026.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount (VND)">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="805.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Combo 1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="888.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="954.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="89.000">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="783.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1113.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="89.000" textAlignment="RIGHT">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="170.0" fitWidth="179.0" layoutX="443.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="170.0" fitWidth="179.0" layoutX="884.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="170.0" fitWidth="179.0" layoutX="443.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/Logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
