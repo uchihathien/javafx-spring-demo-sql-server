@@ -4,13 +4,15 @@ import cinema.backend.entity.Movie;
 import cinema.backend.repo.MovieRepo;
 import cinema.backend.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MovieServiceImpl implements MovieService {
 
-
+@Autowired
     private MovieRepo movieRepo;
 
     @Override

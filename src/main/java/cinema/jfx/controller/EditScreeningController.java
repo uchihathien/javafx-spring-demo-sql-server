@@ -1,5 +1,7 @@
 package cinema.jfx.controller;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -9,4 +11,14 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class EditScreeningController {
+
+    @FXML
+    public void handleUpdate(ActionEvent event) {
+    }
+
+    @FXML
+    public void handleClear(ActionEvent event) {
+    }
+
+
 }

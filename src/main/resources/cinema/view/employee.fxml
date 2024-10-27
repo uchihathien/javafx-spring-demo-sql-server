@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="cinema.jfx.controller.EmployeeController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <AnchorPane layoutX="33.0" layoutY="37.0" prefHeight="694.0" prefWidth="362.0" styleClass="border" stylesheets="@css/css.css">
+            <children>
+                <Button fx:id="importButton1" layoutX="129.0" layoutY="269.0" mnemonicParsing="false"  prefHeight="38.0" prefWidth="105.0" styleClass="import-button" stylesheets="@css/css.css" text="import">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Label fx:id="nameLabel" layoutX="29.0" layoutY="334.0" text="FullName:">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameInput" layoutX="134.0" layoutY="331.0" prefHeight="30.0" prefWidth="200.0" />
+                <Label fx:id="unameLabel" layoutX="29.0" layoutY="367.0" text="UserName:">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernameInput" layoutX="133.0" layoutY="367.0" prefHeight="30.0" prefWidth="200.0" />
+                <Label fx:id="roleLabel" layoutX="29.0" layoutY="416.0" text="Role:">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="roleComboBox" layoutX="134.0" layoutY="423.0" prefHeight="30.0" prefWidth="200.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Admin" />
+                            <String fx:value="Employee" />
+                            <String fx:value="Manager" />
+                            <!-- Add more roles as needed -->
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label fx:id="phoneLabel" layoutX="28.0" layoutY="463.0" text="PhoneNum:">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="phoneNumInput" layoutX="135.0" layoutY="466.0" prefHeight="30.0" prefWidth="200.0" />
+                <Label fx:id="hDateLabel" layoutX="28.0" layoutY="514.0" text="HireDate:">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <DatePicker fx:id="hireDatePicker" layoutX="135.0" layoutY="517.0" prefHeight="30.0" prefWidth="200.0" />
+                <Label fx:id="generalErrorLabel" layoutX="100" layoutY="550" style="-fx-text-fill: red;" text="" /> <!-- Adjusted layoutX and layoutY -->                         <Button fx:id="insertButton1" layoutX="60.0" layoutY="582.0" mnemonicParsing="false"  prefHeight="38.0" prefWidth="105.0" styleClass="insert-button" stylesheets="@css/css.css" text="Insert">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+                <Button fx:id="updateButton2" layoutX="197.0" layoutY="582.0" mnemonicParsing="false"  prefHeight="38.0" prefWidth="105.0" styleClass="update-button" stylesheets="@css/css.css" text="Update">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="deleteButton1" layoutX="60.0" layoutY="631.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="delete-button" stylesheets="@css/css.css" text="Delete">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clearButton2" layoutX="197.0" layoutY="631.0" mnemonicParsing="false"  prefHeight="38.0" prefWidth="105.0" styleClass="clear-button" stylesheets="@css/css.css" text="Clear">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <ImageView fx:id="addUser_imageView" fitHeight="220.0" fitWidth="191.0" layoutX="119.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+
+                    </image>
+                </ImageView>
+                <Label fx:id="imageErrorLabel" styleClass="error-label" textFill="red" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="417.0" layoutY="37.0" prefHeight="694.0" prefWidth="598.0" styleClass="border" stylesheets="@css/css.css">
+            <children>
+                <TextField fx:id="searchInput2" layoutX="28.0" layoutY="14.0" prefHeight="40.0" prefWidth="250.0" promptText="Search" />
+                <TableView fx:id="userTableView" layoutX="24.0" layoutY="75.0" prefHeight="591.0" prefWidth="550.0">
+                    <columns>
+                        <TableColumn fx:id="fullNameTable" prefWidth="121.0" text="Full Name" />
+                        <TableColumn fx:id="usernameTable" prefWidth="88.0" text="UserName" />
+                        <TableColumn fx:id="roleTable" prefWidth="57.0" text="Role" />
+                        <TableColumn fx:id="phoneNumTable" prefWidth="132.0" text="Phone Number" />
+                        <TableColumn fx:id="hireDateTable" prefWidth="148.0" text="Hire Date" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

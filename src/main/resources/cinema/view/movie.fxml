@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinema.jfx.controller.AddMoviesController">
+    <AnchorPane fx:id="addMovie" layoutX="254.0" prefHeight="768.0" prefWidth="428.0" stylesheets="@css/css.css">
+        <children>
+            <AnchorPane fx:id="tableViewBorder" layoutX="240.0" layoutY="25.0" prefHeight="694.0" prefWidth="556.0" styleClass="border" stylesheets="@css/css.css">
+                <children>
+                    <TextField fx:id="searchInput" layoutX="28.0" layoutY="14.0" prefHeight="40.0" prefWidth="250.0" promptText="Search" styleClass="add-textfield" />
+                    <TableView fx:id="tableView" layoutX="14.0" layoutY="70.0" prefHeight="591.0" prefWidth="518.0">
+                        <columns>
+                            <TableColumn fx:id="movieTitleTable" prefWidth="168.0" text="Movie Title" />
+                            <TableColumn fx:id="genreTable" prefWidth="105.0" text="Genre" />
+                            <TableColumn fx:id="durationTable" prefWidth="79.0" text="Duration" />
+                            <TableColumn fx:id="directionTable" prefWidth="163.0" text="Direction" />
+                        </columns>
+                    </TableView>
+                </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-181.0" layoutY="25.0" prefHeight="694.0" prefWidth="338.0" styleClass="border" stylesheets="@css/css.css">
+                <children>
+                    <Button layoutX="129.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleImport" prefHeight="38.0" prefWidth="105.0" styleClass="import-button" stylesheets="@css/css.css" text="Import" textFill="WHITE">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Button>
+                    <Label fx:id="titleLabel" layoutX="27.0" layoutY="330.0" text="Movie Title:">
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="inputMovieTitle" layoutX="134.0" layoutY="333.0" prefHeight="30.0" prefWidth="200.0" styleClass="add-textfield" />
+                    <Label fx:id="GenreLabel" layoutX="69.0" layoutY="369.0" text="Genre:">
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="inputGenre" layoutX="133.0" layoutY="369.0" prefHeight="30.0" prefWidth="200.0" styleClass="add-textfield" />
+                    <Label fx:id="durationLabel" layoutX="45.0" layoutY="405.0" text="Duration:">
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="inputDuration" layoutX="135.0" layoutY="404.0" prefHeight="30.0" prefWidth="200.0" styleClass="add-textfield" />
+                    <Label fx:id="dateLabel" layoutX="78.0" layoutY="447.0" text="Date:">
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="inputDate" layoutX="133.0" layoutY="446.0" prefHeight="30.0" prefWidth="200.0" styleClass="add-textfield" />
+                    <Button layoutX="60.0" layoutY="572.0" mnemonicParsing="false" onAction="#handleInsert" prefHeight="38.0" prefWidth="105.0" styleClass="insert-button" stylesheets="@css/css.css" text="Insert" textFill="#fffefe">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Button>
+                    <Button layoutX="197.0" layoutY="572.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="38.0" prefWidth="105.0" styleClass="update-button" stylesheets="@css/css.css" text="Update" textFill="WHITE">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Button>
+                    <Button layoutX="60.0" layoutY="621.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="38.0" prefWidth="105.0" styleClass="delete-button" stylesheets="@css/css.css" text="Delete" textFill="WHITE">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Button>
+                    <Button layoutX="197.0" layoutY="621.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="38.0" prefWidth="105.0" styleClass="clear-button" stylesheets="@css/css.css" text="Clear" textFill="WHITE">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Button>
+                    <AnchorPane layoutX="94.0" layoutY="33.0" prefHeight="220.0" prefWidth="174.0" styleClass="border">
+                        <children>
+                            <ImageView fx:id="imageView" fitHeight="220.0" fitWidth="150.0" layoutX="13.0" pickOnBounds="true" preserveRatio="true" />
+                        </children>
+                    </AnchorPane>
+                    <Label fx:id="dateLabel1" layoutX="38.0" layoutY="490.0" text="Direction:">
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="inputDirector" layoutX="133.0" layoutY="489.0" prefHeight="30.0" prefWidth="200.0" styleClass="add-textfield" />
+
+                    <!-- Thêm Label để hiển thị thông báo -->
+                    <Label fx:id="notificationLabel" layoutX="47.0" layoutY="529.0" styleClass="red-text" />
+                </children>
+            </AnchorPane>
+        </children>
+    </AnchorPane>
+</AnchorPane>

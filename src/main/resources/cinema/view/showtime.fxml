@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="701.0" prefWidth="983.0" styleClass="homepage-form" stylesheets="@css/css.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinema.jfx.controller.DashboardController">
+    <children>
+        <AnchorPane layoutY="3.0" prefHeight="694.0" prefWidth="362.0" styleClass="border" stylesheets="@css/css.css">
+            <children>
+                <Button fx:id="showTime_updateButton" layoutX="69.0" layoutY="519.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="update-button" stylesheets="@css/css.css" text="Update" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="showTime_clearButton" layoutX="200.0" layoutY="519.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="clear-button" stylesheets="@css/css.css" text="Clear" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <AnchorPane layoutX="94.0" layoutY="59.0" prefHeight="220.0" prefWidth="174.0" styleClass="border">
+                    <children>
+                        <ImageView fx:id="showTime_imageView" fitHeight="220.0" fitWidth="150.0" layoutX="13.0" pickOnBounds="true" preserveRatio="true" />
+                    </children>
+                </AnchorPane>
+                <Label fx:id="showTime_movieTitle" alignment="CENTER" layoutX="43.0" layoutY="291.0" prefHeight="64.0" prefWidth="276.0" text="Label" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="63.0" layoutY="370.0" text="Room:">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="showTime_Room" layoutX="165.0" layoutY="370.0" prefWidth="150.0" promptText="Choose" />
+            <Label layoutX="59.0" layoutY="418.0" text="Show Date:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="462.0" text="ShowTime:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="showTime_showDate" layoutX="166.0" layoutY="418.0" />
+            <TextField fx:id="showTime_showTime" layoutX="165.0" layoutY="461.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="384.0" layoutY="3.0" prefHeight="694.0" prefWidth="598.0" styleClass="border" stylesheets="@css/css.css">
+            <children>
+                <TextField fx:id="showTime_search" layoutX="28.0" layoutY="14.0" prefHeight="40.0" prefWidth="250.0" promptText="Search" styleClass="add-textfield" />
+                <TableView fx:id="showTime_tableView" layoutX="24.0" layoutY="81.0" prefHeight="591.0" prefWidth="550.0">
+                    <columns>
+                        <TableColumn fx:id="showTime_col_title" prefWidth="243.0" text="Movie Title" />
+                        <TableColumn fx:id="showTime_col_genre" prefWidth="140.800048828125" text="Genre" />
+                        <TableColumn fx:id="showTime_col_duration" prefWidth="164.79998779296875" text="Duration" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

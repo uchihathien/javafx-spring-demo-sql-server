@@ -1,104 +1,101 @@
 package cinema.jfx.controller;
 
-import cinema.backend.service.UserService;
-import cinema.backend.util.CurrentUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- * @author github: uchihathien
- * Created on 9/25/2024
- */
-
 @Controller
 public class DashboardController implements Initializable {
 
     @FXML
-    private Button btnAddMovies;
+    private AnchorPane bookingPane;
 
     @FXML
-    private Button btnBooking;
+    private AnchorPane dashboardPane;
 
     @FXML
-    private Button btnDashboard;
+    private AnchorPane editScreeningPane;
 
     @FXML
-    private Label adminlable;
-
-    @Autowired
-    private UserService userService;
+    private AnchorPane employeePane;
 
     @FXML
-    private AnchorPane dashboard;
+    private AnchorPane moviePane;
 
-    @Autowired
-    private ConfigurableApplicationContext springContext;
+    @FXML
+    private AnchorPane reportPane;
 
-    @Autowired
-    private AddMoviesController addMoviesController;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        dashboardPane.setVisible(true);
+
     }
 
     @FXML
-    void handleAddMovies(ActionEvent event) {
-            addMoviesController.handleBooking(event);
+    private void showDashboard() {
+        hideAllPane();
+
+        dashboardPane.setVisible(true);
     }
 
     @FXML
-    void handleBooking(ActionEvent event) {
-        System.out.println(1);
+    private void showMovie() {
+        hideAllPane();
+
+        moviePane.setVisible(true);
+
+    }
+
+
+
+    @FXML
+    private void showBooking() {
+        hideAllPane();
+        bookingPane.setVisible(true);
     }
 
     @FXML
-    void handleDashboard(ActionEvent event) {
-        dashboard.setVisible(true);
+    private void showEditScreening() {
+        hideAllPane();
+        editScreeningPane.setVisible(true);
     }
 
     @FXML
-    void handleEditScreening(ActionEvent event) {
-        System.out.println(1);
+    private void showEmployee() {
+        hideAllPane();
+        employeePane.setVisible(true);
     }
 
     @FXML
-    void handleEmployee(ActionEvent event) {
-        System.out.println(1);
+    private void showReport() {
+        hideAllPane();
+        reportPane.setVisible(true);
     }
 
-    @FXML
-    void handleReport(ActionEvent event) {
-        System.out.println(1);
+
+
+    private void hideAllPane() {
+        dashboardPane.setVisible(false);
+        editScreeningPane.setVisible(false);
+        bookingPane.setVisible(false);
+        reportPane.setVisible(false);
+        moviePane.setVisible(false);
+        employeePane.setVisible(false);
     }
 
-    /**
-     * Điều hướng tới một trang FXML mới
-     * @param fxmlFile tên file FXML muốn chuyển tới
-     */
-    private void navigateTo(String fxmlFile) {
-        try {
-            Stage stage = (Stage) adminlable.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/cinema/view/" + fxmlFile));
-            loader.setControllerFactory(springContext::getBean);
-            Scene scene = new Scene(loader.load());
-            stage.setScene(scene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
+
+
+
+
+
 }

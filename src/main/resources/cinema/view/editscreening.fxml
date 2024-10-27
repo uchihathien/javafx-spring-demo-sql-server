@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="765.0" prefWidth="1041.0" styleClass="homepage-form" stylesheets="@css/css.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinema.jfx.controller.DashboardController">
+    <children>
+        <AnchorPane layoutX="31.0" layoutY="35.0" prefHeight="694.0" prefWidth="362.0" styleClass="border" stylesheets="@css/css.css">
+            <children>
+                <Button fx:id="editScreening_updateButton" layoutX="63.0" layoutY="520.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="update-button" stylesheets="@css/css.css" text="Update" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="editScreening_clearButton" layoutX="194.0" layoutY="520.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" styleClass="clear-button" stylesheets="@css/css.css" text="Clear" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <AnchorPane layoutX="94.0" layoutY="59.0" prefHeight="220.0" prefWidth="174.0" styleClass="border">
+                    <children>
+                        <ImageView fx:id="editScreening_imageView" fitHeight="220.0" fitWidth="150.0" layoutX="13.0" pickOnBounds="true" preserveRatio="true" />
+                    </children>
+                </AnchorPane>
+                <Label fx:id="editScreening_movieTitle" alignment="CENTER" layoutX="43.0" layoutY="291.0" prefHeight="64.0" prefWidth="276.0" text="Label" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="60.0" layoutY="376.0" prefHeight="29.0" prefWidth="70.0" text="Current:">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="editScreening_current" layoutX="152.0" layoutY="376.0" prefWidth="150.0" promptText="Choose" />
+                <Label layoutX="60.0" layoutY="428.0" text="Room:">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="editScreening_Room" layoutX="152.0" layoutY="428.0" prefWidth="150.0" promptText="Choose" />
+                <Label fx:id="editScreening_message" layoutX="60.0" layoutY="475.0" prefHeight="18.0" prefWidth="242.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="421.0" layoutY="35.0" prefHeight="694.0" prefWidth="598.0" styleClass="border" stylesheets="@css/css.css">
+            <children>
+                <TextField fx:id="editScreening_search" layoutX="28.0" layoutY="14.0" prefHeight="40.0" prefWidth="250.0" promptText="Search" styleClass="add-textfield" />
+                <TableView fx:id="addScreening_tableView" layoutX="24.0" layoutY="81.0" prefHeight="591.0" prefWidth="550.0">
+                    <columns>
+                        <TableColumn fx:id="editScreening_col_title" prefWidth="243.0" text="Movie Title" />
+                        <TableColumn fx:id="editScreening_col_genre" prefWidth="91.0" text="Genre" />
+                        <TableColumn fx:id="editScreening_col_duration" prefWidth="79.0" text="Duration" />
+                        <TableColumn fx:id="editScreening_col_current" prefWidth="136.0" text="Current" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

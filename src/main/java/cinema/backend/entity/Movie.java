@@ -39,4 +39,16 @@ public class Movie {
     @Column(name = "Image", nullable = false)
     private byte[] image;
 
+    public Movie(String title, String genre, Integer duration, LocalDate releaseDate, String director, byte[] image) {
+        this.title = title;
+        this.genre = genre;
+        this.duration = duration;
+        this.releaseDate = releaseDate;
+        this.director = director;
+        this.image = image;
+    }
+
+    // Constructor không tham số (bắt buộc cho JPA)
+    public Movie() {
+    }
 }

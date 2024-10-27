@@ -80,19 +80,55 @@ public class LoginController {
         }
     }
 
-    @FXML
-    private void handleLogin() {
-        String username = login_username1.getText();
-        String password = login_password1.getText();
 
-        // Sử dụng UserService để xác minh thông tin đăng nhập
-        if (userService.verifyLogin(username, password)) {
-            System.out.println("Đăng nhập thành công!");
-            CurrentUser.getInstance().setUsername(username);
-            String fullname = userService.getCurrentUserFullname();
-            CurrentUser.getInstance().setFullName(fullname);
-            // Chuyển đến màn hình Dashboard
-            try {
+
+
+
+
+
+//    @FXML
+//    private void handleLogin() {
+////        String username = login_username1.getText();
+////        String password = login_password1.getText();
+//
+//        String username = "admin";
+//        String password = "admin";
+//        // Sử dụng UserService để xác minh thông tin đăng nhập
+//        if (userService.verifyLogin(username, password)) {
+//            System.out.println("Đăng nhập thành công!");
+//            CurrentUser.getInstance().setUsername(username);
+//            String fullname = userService.getCurrentUserFullname();
+//            CurrentUser.getInstance().setFullName(fullname);
+//            // Chuyển đến màn hình Dashboard
+//            try {
+//                // Tải file FXML của dashboard
+//                FXMLLoader loader = new FXMLLoader(getClass().getResource("/cinema/view/dashboard.fxml"));
+//                loader.setControllerFactory(springContext::getBean); // Đảm bảo Spring quản lý controller của dashboard
+//
+//                Parent dashboardRoot = loader.load();
+//
+//                // Lấy controller của dashboard
+//                DashboardController dashboardController = loader.getController();
+//
+//                // Hiển thị dashboard trong một Stage mới
+//                Stage dashboardStage = new Stage();
+//                dashboardStage.setScene(new Scene(dashboardRoot));
+//                dashboardStage.setTitle("Dashboard");
+//                dashboardStage.show();
+//
+//                // Đóng cửa sổ đăng nhập
+//                stage.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        } else {
+//            System.out.println("Tên đăng nhập hoặc mật khẩu không chính xác.");
+//            // Hiển thị thông báo lỗi cho người dùng
+//        }
+//    }
+
+    private void handleLogin() {
+        try {
                 // Tải file FXML của dashboard
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/cinema/view/dashboard.fxml"));
                 loader.setControllerFactory(springContext::getBean); // Đảm bảo Spring quản lý controller của dashboard
@@ -113,10 +149,7 @@ public class LoginController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } else {
-            System.out.println("Tên đăng nhập hoặc mật khẩu không chính xác.");
-            // Hiển thị thông báo lỗi cho người dùng
-        }
+
     }
 
     private void handleClose() {
